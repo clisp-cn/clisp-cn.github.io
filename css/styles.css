@@ -1,0 +1,245 @@
+html {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  padding: 0;
+  margin: 0 auto;
+
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+
+  color: #555555;
+}
+
+a {
+  color: crimson;
+  text-decoration: none;
+}
+
+a:hover {
+  font-weight: bold;
+  text-decoration: underline;
+}
+
+img {
+  object-fit: cover;
+}
+
+.center {
+  margin: 0 auto;
+}
+
+.main {
+  margin-top: 1vh;
+  padding: 20px;
+
+  flex: 1;
+
+  width: 90vw;
+  max-width: 1140px;
+  border: 1px solid #eeeeee;
+  border-radius: 10px;
+
+  font-size: 1.3rem;
+  line-height: 1.7rem;
+}
+
+.main h1 {
+  color: #111111;
+  text-align: center;
+}
+
+.main h2 {
+  border-bottom: 1px solid #eeeeee;
+  padding-bottom: 0.5rem;
+  margin-bottom: 1rem;
+  margin-top: 1rem;
+}
+
+.main-area {
+  display: flex;
+  margin-top: 20px;
+}
+
+.main-area .left-bar {
+  flex: 2;
+  padding: 10px 20px;
+  border: 1px solid #eeeeee;
+}
+
+.main-area .right-bar {
+  margin-left: 10px;
+  padding: 10px 20px;
+  border: 1px solid #eeeeee;
+}
+
+.right-bar li {
+  list-style: none;
+}
+
+.book-box {
+  display: flex;
+  flex-wrap: wrap;
+  margin-right: -15px;
+  margin-left: -15px;
+  box-sizing: border-box;
+}
+
+.book-card {
+  border: 1px solid #eeeeee;
+  display: flex;
+  width: 45%;
+
+  flex-direction: column;
+
+  border-radius: 1rem;
+  margin: 10px 23px;
+  padding: 5px;
+}
+
+.book-cover {
+  margin: 15px 20px;
+  padding: 10px;
+}
+
+.book-cover img {
+  width: 170px;
+  height: 230px;
+}
+
+.book-info {
+  margin-top: 15px;
+  padding-right: 1rem;
+  padding-left: 1rem;
+}
+
+.btn {
+  display: inline-block;
+  font-weight: 400;
+  text-align: center;
+  white-space: nowrap;
+  padding: 0.375rem 0.75rem;
+  font-size: 1.2rem;
+  line-height: 1.5;
+  border-radius: 0.25rem;
+  background-color: crimson;
+  color: white;
+}
+
+.footer {
+  margin-top: 3vh;
+  padding: 10px;
+  border: 1px solid #eeeeee;
+}
+
+.white {
+  background-color: white;
+}
+
+.split-line {
+  border-bottom: 1px solid #eeeeee;
+  padding-bottom: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+.donation-area {
+  margin: 20px 30px;
+  display: grid;
+  grid-template-areas: "alipay wechat union";
+  grid-template-rows: 1fr;
+  grid-gap: 20px;
+  gap: 20px;
+}
+
+.alipay {
+  grid-area: "alipay";
+}
+
+.wechat-pay {
+  grid-area: "wechat";
+}
+
+.union-pay {
+  grid-area: "union";
+}
+
+.donation-area img {
+  width: 300px;
+  height: 300px;
+}
+
+/* adjust for iPhone screen */
+@media (max-width: 414px) {
+  .book-cover {
+    display: none;
+  }
+
+  .book-card {
+    width: 100%;
+  }
+
+  .donation-area {
+    margin: 10px 20px;
+    grid-template-areas:
+      "alipay"
+      "wechat"
+      "union";
+  }
+}
+
+/* adjust for tablets */
+@media (min-width: 414px) and (max-width: 800px) {
+  .book-card {
+    flex-direction: row;
+    width: 100%;
+  }
+
+  .donation-area {
+    grid-template-areas:
+      "alipay wechat"
+      "union .";
+    grid-gap: 50px;
+    gap: 50px;
+  }
+}
+
+@media (max-width: 1266px) {
+  .main {
+    width: 100vw;
+    border: none;
+  }
+  .main-area {
+    flex-direction: column;
+  }
+
+  .main-area .left-bar {
+    border-bottom: none;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+  }
+
+  .main-area .right-bar {
+    margin: 0;
+    border-top: none;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+  }
+}
+
+/* adjust for small screen */
+@media (min-width: 768px) and (max-width: 1266px) {
+  .book-info {
+    margin-top: 0;
+  }
+}
+
+/* normal PC */
+@media (min-width: 1266px) {
+  .book-card {
+    flex-direction: row;
+  }
+
+}
